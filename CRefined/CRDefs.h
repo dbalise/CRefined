@@ -10,5 +10,10 @@
 #define CRefined_CRDefs_h
 
 
+#define CR_INLINE inline
+#define CR_EXPORT extern
+
+
+
 
 #endif

@@ -6,8 +6,18 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		03FAA35617ECDCDF006596A3 /* CRAllocator.c in Sources */ = {isa = PBXBuildFile; fileRef = 03FAA35517ECDCDF006596A3 /* CRAllocator.c */; };
+		03FAA35A17ECE4C9006596A3 /* CRBase.c in Sources */ = {isa = PBXBuildFile; fileRef = 03FAA35917ECE4C9006596A3 /* CRBase.c */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		03FAA34A17ECDC02006596A3 /* libCRefined.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCRefined.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		03FAA35417ECDCB8006596A3 /* CRAllocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRAllocator.h; sourceTree = "<group>"; };
+		03FAA35517ECDCDF006596A3 /* CRAllocator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CRAllocator.c; sourceTree = "<group>"; };
+		03FAA35717ECDD3D006596A3 /* CRBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRBase.h; sourceTree = "<group>"; };
+		03FAA35817ECDD4E006596A3 /* CRDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRDefs.h; sourceTree = "<group>"; };
+		03FAA35917ECE4C9006596A3 /* CRBase.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CRBase.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +34,7 @@
 		03FAA34117ECDC02006596A3 = {
 			isa = PBXGroup;
 			children = (
+				03FAA35117ECDC58006596A3 /* CRefined */,
 				03FAA34B17ECDC02006596A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -34,6 +45,35 @@
 				03FAA34A17ECDC02006596A3 /* libCRefined.dylib */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		03FAA35117ECDC58006596A3 /* CRefined */ = {
+			isa = PBXGroup;
+			children = (
+				03FAA35217ECDC58006596A3 /* Allocation */,
+				03FAA35317ECDC58006596A3 /* Collections */,
+				03FAA35717ECDD3D006596A3 /* CRBase.h */,
+				03FAA35817ECDD4E006596A3 /* CRDefs.h */,
+				03FAA35917ECE4C9006596A3 /* CRBase.c */,
+			);
+			name = CRefined;
+			path = ../../CRefined;
+			sourceTree = "<group>";
+		};
+		03FAA35217ECDC58006596A3 /* Allocation */ = {
+			isa = PBXGroup;
+			children = (
+				03FAA35417ECDCB8006596A3 /* CRAllocator.h */,
+				03FAA35517ECDCDF006596A3 /* CRAllocator.c */,
+			);
+			path = Allocation;
+			sourceTree = "<group>";
+		};
+		03FAA35317ECDC58006596A3 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Collections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FAA35617ECDCDF006596A3 /* CRAllocator.c in Sources */,
+				03FAA35A17ECE4C9006596A3 /* CRBase.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +206,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu89;
+				HEADER_SEARCH_PATHS = ../../;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -172,6 +216,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu89;
+				HEADER_SEARCH_PATHS = ../../;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
